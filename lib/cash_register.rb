@@ -42,7 +42,7 @@ end
 
 
   def void_last_transaction()
-  
+  remove
 @total -= @last_transaction_amount
 
   end
