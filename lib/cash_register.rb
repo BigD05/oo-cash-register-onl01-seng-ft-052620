@@ -1,7 +1,7 @@
 
 class CashRegister
 
-  attr_accessor :total, :discount, :last_transaction_amount, :items, :remove
+  attr_accessor :total, :discount, :last_transaction_amount, :items, 
 
   def initialize(discount = 0)
     @total = 0
@@ -9,13 +9,9 @@ class CashRegister
     @items = []
   end
 
-def remove(item)
-@items.pop  
-end 
 
 
-
-  def add_item(title,price,quantity = 1)
+ def add_item(title,price,quantity = 1)
     if quantity>1
       i=0
       while i<quantity
@@ -42,7 +38,7 @@ end
 
 
   def void_last_transaction()
-  remove
+  @items.pop()
 @total -= @last_transaction_amount
 
   end
