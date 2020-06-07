@@ -1,13 +1,18 @@
 
 class CashRegister
 
-  attr_accessor :total, :discount, :last_transaction_amount, :items
+  attr_accessor :total, :discount, :last_transaction_amount, :items, :remove
 
   def initialize(discount = 0)
     @total = 0
     @discount = discount
     @items = []
   end
+
+def remove(item)
+@items.pop  
+end 
+
 
 
   def add_item(title,price,quantity = 1)
