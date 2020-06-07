@@ -37,7 +37,7 @@ class CashRegister
 
 
   def void_last_transaction()
-    apply_discount.void_last_transaction
+    add_item.void_last_transaction
     @total -= @last_transaction_amount
   end
 
